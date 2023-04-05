@@ -22,28 +22,6 @@ const Contacts = ({ filterContacts, deleteContact }) => {
 
 export default Contacts;
 
-// class Contacts extends Component {
-//   render() {
-//     return this.props.filterContacts.map(contact => (
-//       <List key={contact.id}>
-//         <Item>
-//           <p>
-//             {contact.name}: {contact.number}
-//           </p>
-//           <ContactsBtn
-//             type="button"
-//             onClick={() => this.props.deleteContact(contact.id)}
-//             id={contact.id}
-//           >
-//             Delete
-//           </ContactsBtn>
-//         </Item>
-//       </List>
-//     ));
-//   }
-// }
-// export default Contacts;
-
 Contacts.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
