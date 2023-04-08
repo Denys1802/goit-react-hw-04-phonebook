@@ -20,8 +20,8 @@ const App = () => {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(contacts), [contacts]);
-  });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(contacts));
+  }, [contacts]);
 
   const onSubmitForm = newContact => {
     setContacts([...contacts, ...[newContact]]);
@@ -35,7 +35,6 @@ const App = () => {
   };
 
   const filterContacts = () => {
-    console.log(contacts);
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );

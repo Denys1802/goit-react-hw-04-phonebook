@@ -28,7 +28,7 @@ const UserForm = ({ onSubmitForm, contacts }) => {
       })
     ) {
       alert('Its allready in case');
-      this.reset();
+      reset();
       return;
     }
 
